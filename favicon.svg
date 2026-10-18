@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D93B58"/>
+      <stop offset="45%" stop-color="#8E2A66"/>
+      <stop offset="100%" stop-color="#193863"/>
+    </linearGradient>
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E54362"/>
+      <stop offset="100%" stop-color="#BF2545"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#071326" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Luxury Squircle Canvas -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bgGrad)"/>
+  <rect x="3.5" y="3.5" width="57" height="57" rx="14.5" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+
+  <!-- Gift Favor Keepsake Icon -->
+  <g filter="url(#shadow)">
+    <!-- Main Box Body -->
+    <rect x="14" y="29" width="36" height="23" rx="4" fill="#FFFFFF"/>
+
+    <!-- Box Lid -->
+    <rect x="11.5" y="23" width="41" height="8" rx="2.5" fill="#FFFFFF"/>
+    
+    <!-- Subtle Lid Underside Crease -->
+    <line x1="14" y1="31" x2="50" y2="31" stroke="rgba(0,0,0,0.06)" stroke-width="1.2"/>
+
+    <!-- Vertical Ribbon -->
+    <rect x="29" y="23" width="6" height="29" fill="url(#ribbonGrad)"/>
+
+    <!-- Bow Loops (Left & Right) -->
+    <!-- Left Loop -->
+    <path d="M32 23 C26 15 17 15 20 22 C22 24.5 28 23.5 32 23 Z" fill="url(#ribbonGrad)"/>
+    <!-- Right Loop -->
+    <path d="M32 23 C38 15 47 15 44 22 C42 24.5 36 23.5 32 23 Z" fill="url(#ribbonGrad)"/>
+    
+    <!-- Bow Knot Center -->
+    <circle cx="32" cy="22.5" r="3.2" fill="#A11B35"/>
+  </g>
+
+  <!-- Celestial Bridal Sparkles -->
+  <!-- Top Right Sparkle Star -->
+  <path d="M49 8 Q49 13 54 13 Q49 13 49 18 Q49 13 44 13 Q49 13 49 8 Z" fill="#FFFFFF" opacity="0.95"/>
+  <!-- Delicate Shimmer Dots -->
+  <circle cx="13" cy="15" r="1.5" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="53" cy="46" r="1.3" fill="#FFFFFF" opacity="0.75"/>
+</svg>

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Favors by Theme | L'Amour Atelier & Gifts</title>
+  <meta name="description" content="Explore handcrafted wedding favors organized by aesthetic themes: Rustic Boho, Modern Luxe, Coastal Beach, Vintage Glam, Minimalist Chic, Gourmet & Bridal Party.">
+  
+  <!-- Favicon Suite -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=5.3">
+
+  <!-- Exact Unified Hero Sizing across all viewports -->
+  <style>
+    .hero-classic,
+    .page-banner {
+      height: 480px !important;
+      min-height: 480px !important;
+      max-height: 480px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      padding: 40px 24px !important;
+      border-bottom: 3px solid var(--color-accent) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+    @media (max-width: 1040px) {
+      .hero-classic,
+      .page-banner {
+        height: 440px !important;
+        min-height: 440px !important;
+        max-height: 440px !important;
+        padding: 32px 20px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .hero-classic,
+      .page-banner {
+        height: 380px !important;
+        min-height: 380px !important;
+        max-height: 380px !important;
+        padding: 24px 18px !important;
+      }
+      .hero-title,
+      .page-banner-title {
+        font-size: clamp(1.5rem, 5vw, 1.85rem) !important;
+        line-height: 1.22 !important;
+        margin-bottom: 8px !important;
+      }
+      .hero-description,
+      .page-banner-desc {
+        font-size: 0.88rem !important;
+        line-height: 1.45 !important;
+        max-width: 90% !important;
+        margin-bottom: 8px !important;
+      }
+      .hero-buttons {
+        margin-top: 10px !important;
+        gap: 10px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-classic,
+      .page-banner {
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+        padding: 16px 14px !important;
+      }
+      .section-tag {
+        font-size: 0.72rem !important;
+        padding: 4px 10px !important;
+        margin-bottom: 6px !important;
+      }
+      .hero-title,
+      .page-banner-title {
+        font-size: 1.3rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+      }
+      .hero-description,
+      .page-banner-desc {
+        font-size: 0.82rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 8px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
+      .hero-buttons {
+        flex-direction: row !important;
+        justify-content: center !important;
+        width: auto !important;
+        gap: 8px !important;
+        margin-top: 4px !important;
+      }
+      .hero-buttons .btn {
+        width: auto !important;
+        padding: 7px 14px !important;
+        font-size: 0.78rem !important;
+      }
+      .breadcrumb {
+        margin-bottom: 6px !important;
+        font-size: 0.75rem !important;
+      }
+    }
+
+    /* Straight Text Line Alignment Across All Product Cards */
+    .product-theme-tag {
+      height: 1.25rem !important;
+      line-height: 1.25rem !important;
+      display: block !important;
+      margin-bottom: 8px !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+    .product-title {
+      font-size: 1.15rem !important;
+      line-height: 1.35 !important;
+      height: 4.05em !important;
+      min-height: 4.05em !important;
+      margin-bottom: 10px !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 3 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+    .product-desc {
+      font-size: 0.84rem !important;
+      line-height: 1.5 !important;
+      height: 3em !important;
+      min-height: 3em !important;
+      max-height: 3em !important;
+      margin-bottom: 14px !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+    .product-meta {
+      margin-top: auto !important;
+      padding-top: 14px !important;
+      border-top: 1px solid var(--color-border-light) !important;
+    }
+  </style>
+
+  <!-- Instant Theme & Direction Initializer to prevent flash -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('wedding_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        if (localStorage.getItem('wedding_direction') === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span>✨ <strong>Tier Savings:</strong> Enjoy up to 25% bulk discount on orders of 350+ wedding favors</span>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-monogram">L'Amour</span>
+        <span class="brand-name">Atelier & Gifts</span>
+        <span class="brand-tagline">Bespoke Wedding Keepsakes</span>
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item has-dropdown">
+          <button class="nav-link dropdown-toggle" id="homeDropdownBtn" aria-expanded="false" aria-haspopup="true" type="button">
+            <span>Home</span>
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="homeDropdownBtn">
+            <a href="index.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 1</span>
+              <span class="dropdown-item-sub">Classic Elegance</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 2</span>
+              <span class="dropdown-item-sub">Botanical Luxe</span>
+            </a>
+          </div>
+        </div>
+        <a href="products.html" class="nav-link active">Favors by Theme</a>
+        <a href="product.html" class="nav-link">Product Page</a>
+        <a href="custom-branding.html" class="nav-link">Custom Branding</a>
+        <a href="contact.html" class="nav-link">Contact & Enquiry</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
+          <i class="fas fa-arrow-left"></i>
+          <span class="rtl-badge">RTL</span>
+        </button>
+        <button class="nav-icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="nav-icon-btn open-wishlist-btn" title="View Favor Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="badge-count wishlist-count-badge">2</span>
+        </button>
+        <a href="contact.html" class="btn btn-gold btn-sm btn-pill">Request Quote</a>
+        <button class="mobile-toggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner products-banner" style="height: 480px; min-height: 480px;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i>
+          <span>Wedding Favors Catalog</span>
+        </div>
+        <h1 class="page-banner-title">Curated Favors by Theme</h1>
+        <p class="page-banner-desc">
+          Discover bespoke wedding favors, luxury stationery card suites, and personalized keepsakes designed to effortlessly reflect your celebration aesthetic. Every piece is handcrafted in our atelier with custom foil stamping, calligraphy, and artisanal finishes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Catalog Section -->
+  <section class="section-padding bg-ivory">
+    <div class="container">
+      
+      <!-- Filter Bar Wrapper -->
+      <div class="filter-bar-wrapper">
+        <div class="theme-filter-nav">
+          <button class="filter-btn active" data-filter="all">All Keepsakes</button>
+          <button class="filter-btn" data-filter="boho">Rustic & Boho</button>
+          <button class="filter-btn" data-filter="luxe">Modern Luxe</button>
+          <button class="filter-btn" data-filter="coastal">Coastal & Beach</button>
+          <button class="filter-btn" data-filter="vintage">Vintage Glamour</button>
+          <button class="filter-btn" data-filter="minimalist">Minimalist Chic</button>
+          <button class="filter-btn" data-filter="gourmet">Gourmet & Edibles</button>
+          <button class="filter-btn" data-filter="bridal">Bridal Party Suites</button>
+        </div>
+
+        <!-- Catalog Toolbar -->
+        <div class="catalog-toolbar">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="productSearchInput" placeholder="Search favors (e.g. candle, honey, coaster, box)...">
+          </div>
+          <div class="sort-group">
+            <label for="productSortSelect"><i class="fas fa-sliders-h"></i> Sort by:</label>
+            <select id="productSortSelect">
+              <option value="featured">Featured & Popular</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name">Product Name (A - Z)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid (16 products) -->
+      <div class="products-grid">
+        <!-- 1 -->
+        <div class="product-card" data-theme="luxe">
+          <div class="product-media">
+            <span class="product-badge gold">Best Seller</span>
+            <img src="assets/images/bespoke-bridal-keepsake-box.jpg" alt="Personalized Bridal Keepsake Gift Box Suite with Satin Ribbon" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1769038931982-073f9d06cade?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Modern Luxe</span>
+            <h3 class="product-title"><a href="product.html">Bespoke Bridal Keepsake Favor Box Suite with Gold Calligraphy</a></h3>
+            <p class="product-desc">Handcrafted luxury bridal party keepsake shadow box featuring personalized gold calligraphy, accompanied by coordinating satin ribbon favor boxes.</p>
+            <div class="product-meta">
+              <span class="product-price">$5.25</span>
+              <span class="product-moq">Min. 30 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="product-card" data-theme="gourmet">
+          <div class="product-media">
+            <span class="product-badge sage">Organic</span>
+            <img src="assets/images/wildflower-honey-jars.jpg" alt="Pure Wildflower Honey Miniature Jars with Custom Monogram Tag" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1765946024371-e09ebfc6aa77?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Gourmet & Edibles</span>
+            <h3 class="product-title"><a href="product.html?id=favor-2">Pure Wildflower Honey Miniature Jars with Custom Label</a></h3>
+            <p class="product-desc">Artisanal raw wildflower honey in miniature glass jars with gold twist lids, finished with personalized guest label tags and hand-tied cord bows.</p>
+            <div class="product-meta">
+              <span class="product-price">$5.25</span>
+              <span class="product-moq">Min. 25 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="product-card" data-theme="luxe">
+          <div class="product-media">
+            <span class="product-badge blush">Foil Stamped</span>
+            <img src="assets/images/champagne-gold-glitter-box.jpg" alt="Champagne Gold Glitter Keepsake Favor Box with Cord" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512916206820-bd6d503c003e?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Modern Luxe</span>
+            <h3 class="product-title"><a href="product.html?id=favor-3">Champagne Gold Glitter Keepsake Favor Box with Cord</a></h3>
+            <p class="product-desc">Lustrous square gold glitter keepsake gift box tied with white satin cord, ideal for gourmet confectionery, custom macarons, or heirloom bridal jewelry.</p>
+            <div class="product-meta">
+              <span class="product-price">$3.90</span>
+              <span class="product-moq">Min. 40 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="product-card" data-theme="vintage">
+          <div class="product-media">
+            <span class="product-badge gold">Heirloom</span>
+            <img src="assets/images/antique-key-bottle-opener.jpg" alt="Antique Brass Skeleton Key Bottle Opener Favor with Letterpress Tag">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Vintage Glamour</span>
+            <h3 class="product-title"><a href="product.html?id=favor-4">Antique Brass Key Bottle Opener & Escort Tag</a></h3>
+            <p class="product-desc">Heirloom-grade solid brass skeleton key bottle opener tied to letterpress escort cards with pure silk chiffon ribbon.</p>
+            <div class="product-meta">
+              <span class="product-price">$4.10</span>
+              <span class="product-moq">Min. 30 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="product-card" data-theme="minimalist boho">
+          <div class="product-media">
+            <span class="product-badge sage">Crimson Velvet</span>
+            <img src="assets/images/crimson-velvet-ribbon-box.jpg" alt="Crimson Keepsake Favor Box with Gold Satin Ribbon & Escort Tag" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1633107939447-ae83e8e00355?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Minimalist Chic</span>
+            <h3 class="product-title"><a href="product.html">Crimson Keepsake Favor Box with Gold Satin Ribbon</a></h3>
+            <p class="product-desc">Handcrafted crimson favor boxes tied with rich metallic gold satin bow and paired with personalized blank white escort seating tags.</p>
+            <div class="product-meta">
+              <span class="product-price">$3.95</span>
+              <span class="product-moq">Min. 35 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="product-card" data-theme="gourmet luxe">
+          <div class="product-media">
+            <span class="product-badge gold">Sparkling Rosé</span>
+            <img src="assets/images/mini-champagne-favor.jpg" alt="Personalized Miniature Sparkling Rosé Champagne Wedding Favor with Silk Ribbon">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Gourmet & Edibles</span>
+            <h3 class="product-title"><a href="product.html">Personalized Miniature Sparkling Rosé Bottle</a></h3>
+            <p class="product-desc">Miniature sparkling rosé champagne bottle with gold foil neck, personalized couple monogram foil crest label, and blush silk chiffon bow.</p>
+            <div class="product-meta">
+              <span class="product-price">$5.75</span>
+              <span class="product-moq">Min. 30 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="product-card" data-theme="luxe boho">
+          <div class="product-media">
+            <span class="product-badge blush">Hand-Poured</span>
+            <img src="assets/images/artisan-frosted-soy-candle.jpg" alt="Artisan Frosted Glass Botanical Scented Soy Candle Favor" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1619799360829-6689343ca0bb?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Modern Luxe</span>
+            <h3 class="product-title"><a href="product.html?id=favor-1">Artisan Frosted Glass Botanical Scented Candle</a></h3>
+            <p class="product-desc">Handcrafted 100% natural soy wax candle poured in frosted luxury glass, infused with bergamot, thyme, and white tea botanicals with custom matches.</p>
+            <div class="product-meta">
+              <span class="product-price">$4.80</span>
+              <span class="product-moq">Min. 30 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="product-card" data-theme="coastal">
+          <div class="product-media">
+            <span class="product-badge sage">Artisan Soap</span>
+            <img src="assets/images/botanical-artisan-soap.jpg" alt="Eden Handcrafted Botanical Artisan Soap Bar with Custom Cord Tassel" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1623332250676-d8fd938563f6?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Coastal & Beach</span>
+            <h3 class="product-title"><a href="product.html">Eden Handcrafted Botanical Artisan Soap Bar</a></h3>
+            <p class="product-desc">Cold-processed organic botanical soap bar wrapped with branded paper sleeve and bound with a braided cotton cord hanging tassel.</p>
+            <div class="product-meta">
+              <span class="product-price">$3.80</span>
+              <span class="product-moq">Min. 40 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="product-card" data-theme="vintage boho">
+          <div class="product-media">
+            <span class="product-badge gold">Engraved Wood</span>
+            <img src="assets/images/engraved-wood-coasters.jpg" alt="Personalized Engraved Wood Slice Keepsake Coasters with Jute Twine">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Vintage Glamour</span>
+            <h3 class="product-title"><a href="product.html">Personalized Engraved Wood Slice Keepsake Coasters</a></h3>
+            <p class="product-desc">Natural rustic wood slice coasters laser-engraved with botanical leaf wreath monogram, couple names, and wedding date, tied with jute twine.</p>
+            <div class="product-meta">
+              <span class="product-price">$3.95</span>
+              <span class="product-moq">Min. 30 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="product-card" data-theme="coastal vintage">
+          <div class="product-media">
+            <span class="product-badge blush">Velvet Pouch</span>
+            <img src="assets/images/velvet-favor-pouches.jpg" alt="Velvet Monogram Jewelry & Keepsake Favor Pouches with Gold Tassels">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Coastal & Beach</span>
+            <h3 class="product-title"><a href="product.html">Velvet Monogram Jewelry & Keepsake Favor Pouches</a></h3>
+            <p class="product-desc">Plush blush and emerald sage velvet jewelry keepsake favor pouches with gold monogram stamping and twisted gold cord tassels.</p>
+            <div class="product-meta">
+              <span class="product-price">$3.60</span>
+              <span class="product-moq">Min. 35 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="product-card" data-theme="vintage gourmet">
+          <div class="product-media">
+            <span class="product-badge gold">French Patisserie</span>
+            <img src="assets/images/wax-sealed-macaron-box.jpg" alt="Wax-Sealed French Macaron Keepsake Box with Gold Monogram Seal">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Vintage Glamour</span>
+            <h3 class="product-title"><a href="product.html">Wax-Sealed French Macaron Keepsake Box</a></h3>
+            <p class="product-desc">Delicate artisan Parisian macarons nestled in an embossed blush keepsake box, secured with an heirloom gold wax seal and custom ribbon.</p>
+            <div class="product-meta">
+              <span class="product-price">$5.50</span>
+              <span class="product-moq">Min. 30 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="product-card" data-theme="minimalist boho">
+          <div class="product-media">
+            <span class="product-badge sage">Reception Favor</span>
+            <img src="assets/images/banquet-table-place-favors.jpg" alt="Artisan Banquet Table Place Favors with Handwritten Escort Tags" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Minimalist Chic</span>
+            <h3 class="product-title"><a href="product.html">Artisan Banquet Table Place Favors with Escort Tags</a></h3>
+            <p class="product-desc">Handcrafted wedding banquet place favors wrapped in organic fabric with handwritten kraft escort tags and delicate wildflower accents.</p>
+            <div class="product-meta">
+              <span class="product-price">$3.75</span>
+              <span class="product-moq">Min. 35 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="product-card" data-theme="luxe minimalist">
+          <div class="product-media">
+            <span class="product-badge gold">Groomsmen Gift</span>
+            <img src="assets/images/groomsmen-flask-gift-set.jpg" alt="Curated Groomsmen Engraved Leather Flask Keepsake Gift Set">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Modern Luxe</span>
+            <h3 class="product-title"><a href="product.html">Curated Groomsmen Engraved Leather Flask Gift Set</a></h3>
+            <p class="product-desc">Custom engraved leather-wrapped stainless steel flask set with shot cups in a velvet-lined matte black keepsake box, crafted for groomsmen gifting.</p>
+            <div class="product-meta">
+              <span class="product-price">$14.50</span>
+              <span class="product-moq">Min. 5 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="product-card" data-theme="bridal">
+          <div class="product-media">
+            <span class="product-badge blush">Personalized</span>
+            <img src="assets/images/wedding-sweet-keepsake-jar.jpg" alt="Wedding Sweet Keepsake Favor Jar with Escort Tag" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1525845097200-f98709181e61?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Bridal Party Suites</span>
+            <h3 class="product-title"><a href="product.html">Wedding Sweet Keepsake Favor Jar with Escort Tag</a></h3>
+            <p class="product-desc">Artisan miniature favor jar topped with polka fabric wrap and rustic twine, filled with gourmet Jordan almonds and personalized tag.</p>
+            <div class="product-meta">
+              <span class="product-price">$4.50</span>
+              <span class="product-moq">Min. 30 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="product-card" data-theme="bridal luxe">
+          <div class="product-media">
+            <span class="product-badge blush">Proposal Box</span>
+            <img src="assets/images/bridesmaid-proposal-gift-box.jpg" alt="Curated Bridesmaid Proposal Keepsake Gift Box Presentation" onerror="this.onerror=null; this.src='https://plus.unsplash.com/premium_photo-1661292056480-da82e9cf5599?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Bridal Party Suites</span>
+            <h3 class="product-title"><a href="product.html">Curated Bridesmaid Proposal Keepsake Gift Box</a></h3>
+            <p class="product-desc">Curated luxury proposal gift hamper featuring personalized keepsake favor box, hand-tied satin ribbon, and bridal party keepsakes.</p>
+            <div class="product-meta">
+              <span class="product-price">$18.50</span>
+              <span class="product-moq">Min. 4 pcs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="product-card" data-theme="coastal luxe">
+          <div class="product-media">
+            <span class="product-badge sage">Artisan Ceramic</span>
+            <img src="assets/images/ceramic-monogram-mug-favor.jpg" alt="Personalized Ceramic Monogram Mug Wedding Favor" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1643946404043-178456b0e3f8?auto=format&fit=crop&w=600&q=80';">
+            <div class="product-actions">
+              <button class="btn-icon-action btn-quick-view" title="Quick View"><i class="far fa-eye"></i></button>
+              <button class="btn-icon-action btn-add-favor" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+            </div>
+          </div>
+          <div class="product-body">
+            <span class="product-theme-tag">Coastal & Beach</span>
+            <h3 class="product-title"><a href="product.html">Personalized Ceramic Monogram Mug Wedding Favor</a></h3>
+            <p class="product-desc">Handcrafted artisanal ceramic coffee mugs custom-stamped with your couple crest, boxed in individual eco-kraft gift packaging with twine.</p>
+            <div class="product-meta">
+              <span class="product-price">$6.20</span>
+              <span class="product-moq">Min. 25 pcs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Products Found State -->
+      <div id="noProductsFound" style="display: none; text-align: center; padding: 60px 20px;">
+        <i class="fas fa-search" style="font-size: 3rem; color: var(--color-gold-light); margin-bottom: 16px;"></i>
+        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">No Favors Found</h3>
+        <p style="color: var(--color-muted); max-width: 450px; margin: 0 auto 20px auto;">
+          We couldn't find any favors matching your search. Try adjusting your search term or select "All Keepsakes".
+        </p>
+      </div>
+
+      <!-- Interactive Bulk Quantity & Discount Calculator -->
+      <div class="calculator-card">
+        <div class="calc-grid">
+          <div>
+            <span class="section-tag">Interactive Estimator</span>
+            <h3 style="font-size: 2rem; margin-bottom: 12px;">Wedding Favor Bulk Discount Calculator</h3>
+            <p style="color: var(--color-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+              Estimate your bulk wedding savings in real time. The more keepsakes you craft for your guests, the greater your automated studio discount.
+            </p>
+            
+            <div class="range-slider-wrapper">
+              <div class="range-header">
+                <span>Select Your Guest Count / Favors Needed:</span>
+                <span id="bulkCountDisplay" style="color: var(--color-primary); font-weight: 700; font-size: 1.1rem;">120 Favors</span>
+              </div>
+              <input type="range" class="range-slider" id="bulkQuantitySlider" min="30" max="600" step="10" value="120">
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--color-muted); margin-top: 6px;">
+                <span>30 pcs (Min)</span>
+                <span>100 pcs (12% off)</span>
+                <span>200 pcs (18% off)</span>
+                <span>350+ pcs (25% off)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-summary-box">
+            <span class="calc-tier-badge" id="bulkDiscountBadge">12% Tier Savings (100-199 pcs)</span>
+            <div class="calc-total" id="bulkTotalDisplay">$528.00</div>
+            <div class="calc-unit-rate" id="bulkUnitRate">$4.40 / favor (Reg. $5.00)</div>
+            <a href="contact.html" class="btn btn-gold btn-sm btn-pill" style="width: 100%;">Apply to Wedding Quote</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Wedding Favor Presentation & Table Placement Guide -->
+  <section class="section-padding favor-placement-section" style="background-color: var(--color-warm-light); border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Styling & Reception Etiquette</span>
+        <h2 class="section-title">Favor Presentation & Placement Guide</h2>
+        <p class="section-subtitle">
+          From charger plates to midnight sparkler departures, discover four elegant ways to showcase your personalized keepsakes at your celebration.
+        </p>
+      </div>
+
+      <div class="placement-guide-grid">
+        <!-- Placement Card 1 -->
+        <div class="placement-card">
+          <div class="placement-card-media">
+            <span class="placement-badge"><i class="fas fa-utensils"></i> Place Setting</span>
+            <img src="assets/images/place-setting-favor.jpg" alt="Individual Charger Place Setting Wedding Favor">
+          </div>
+          <div class="placement-card-content">
+            <span class="placement-step-number">01</span>
+            <h3 class="placement-card-title">The Individual Charger Setting</h3>
+            <p class="placement-card-desc">
+              Centered gracefully on folded French linen napkins or layered atop gold charger plates. Adorned with a handwritten calligraphy escort card and a delicate botanical sprig.
+            </p>
+            <div class="placement-card-tip">
+              <strong><i class="fas fa-lightbulb"></i> Stylist Tip:</strong> Best suited for monogrammed linen boxes, sweet jars, or mini scented soy candles.
+            </div>
+            <div class="placement-card-footer">
+              <span class="placement-guest-stat"><i class="fas fa-users"></i> 1 Favor Per Guest</span>
+              <a href="contact.html" class="placement-action-link">Plan Setting <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placement Card 2 -->
+        <div class="placement-card">
+          <div class="placement-card-media">
+            <span class="placement-badge"><i class="fas fa-glass-cheers"></i> Welcome Credenza</span>
+            <img src="assets/images/welcome-credenza-favors.jpg" alt="Welcome Credenza and Escort Wedding Favor Table">
+          </div>
+          <div class="placement-card-content">
+            <span class="placement-step-number">02</span>
+            <h3 class="placement-card-title">The Escort & Greeting Table</h3>
+            <p class="placement-card-desc">
+              Arranged in dramatic tiered symmetry on an antique credenza at cocktail entrance. Guests discover their favor alongside their seating card and a flute of vintage champagne.
+            </p>
+            <div class="placement-card-tip">
+              <strong><i class="fas fa-lightbulb"></i> Stylist Tip:</strong> Elevate heights using brass pedestals, floral runners, and floating votive candles.
+            </div>
+            <div class="placement-card-footer">
+              <span class="placement-guest-stat"><i class="fas fa-glass-martini-alt"></i> Cocktail Arrival</span>
+              <a href="contact.html" class="placement-action-link">Plan Setting <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placement Card 3 -->
+        <div class="placement-card">
+          <div class="placement-card-media">
+            <span class="placement-badge"><i class="fas fa-hotel"></i> Hotel Suite</span>
+            <img src="assets/images/hotel-welcome-suite.jpg" alt="Destination Wedding Hotel Welcome Gift Suite">
+          </div>
+          <div class="placement-card-content">
+            <span class="placement-step-number">03</span>
+            <h3 class="placement-card-title">Destination Welcome Suite</h3>
+            <p class="placement-card-desc">
+              Delivered directly to hotel guest rooms upon arrival. Bundles custom keepsakes, organic artisan sweets, luggage tags, and your wedding weekend schedule in a custom tote.
+            </p>
+            <div class="placement-card-tip">
+              <strong><i class="fas fa-lightbulb"></i> Stylist Tip:</strong> Include a personalized handwritten thank-you note from the couple.
+            </div>
+            <div class="placement-card-footer">
+              <span class="placement-guest-stat"><i class="fas fa-luggage-cart"></i> 1 Per Couple</span>
+              <a href="contact.html" class="placement-action-link">Plan Setting <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placement Card 4 -->
+        <div class="placement-card">
+          <div class="placement-card-media">
+            <span class="placement-badge"><i class="fas fa-moon"></i> Grand Finale</span>
+            <img src="assets/images/midnight-departure-favors.jpg" alt="Midnight Send-Off Departure Wedding Favor Bar">
+          </div>
+          <div class="placement-card-content">
+            <span class="placement-step-number">04</span>
+            <h3 class="placement-card-title">Midnight Departure Favor Bar</h3>
+            <p class="placement-card-desc">
+              Staged near the grand ballroom exit as the final song plays. Handed to departing guests alongside late-night sweet treats, hot cider cones, or mini celebratory prosecco bottles.
+            </p>
+            <div class="placement-card-tip">
+              <strong><i class="fas fa-lightbulb"></i> Stylist Tip:</strong> Station wedding attendants to hand favors out during the sparkler exit send-off.
+            </div>
+            <div class="placement-card-footer">
+              <span class="placement-guest-stat"><i class="fas fa-gift"></i> Sparkler Send-Off</span>
+              <a href="contact.html" class="placement-action-link">Plan Setting <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Box Promo Banner -->
+  <section class="section-padding bg-cream" style="border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, var(--color-white), var(--color-ivory)); border: 1px dashed var(--color-gold); border-radius: var(--radius-md); padding: 45px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 30px; align-items: center;">
+        <div>
+          <span class="section-tag">Touch & Scent Experience</span>
+          <h2 style="font-size: 2.2rem; margin-bottom: 12px;">Order the Curated 4-Piece Sample Box</h2>
+          <p style="color: var(--color-muted); line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px;">
+            Touch the linen textures, smell our hand-poured botanical essences, and verify our metallic foil stamping under natural light before placing your full wedding order. 100% credited back toward your wedding favor order.
+          </p>
+          <a href="contact.html" class="btn btn-primary btn-pill">Request Sample Kit &bull; $25 (Credited)</a>
+        </div>
+        <div style="text-align: center;">
+          <img src="assets/images/curated-sample-favor-box.jpg" alt="Curated 4-Piece Wedding Favor Discovery Sample Box" style="border-radius: var(--radius-sm); max-height: 260px; object-fit: cover; margin: 0 auto; box-shadow: var(--shadow-card);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="align-items: flex-start; text-align: left; margin-bottom: 16px;">
+            <span class="brand-monogram" style="color: var(--color-gold-light);">L'Amour</span>
+            <span class="brand-name" style="color: white;">Atelier & Gifts</span>
+          </a>
+          <p>
+            Bespoke wedding favors, luxury personalized gifts, and bridal party keepsakes handcrafted with intention and elegance.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="Pinterest" aria-label="Visit our Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook" aria-label="Visit our Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube" aria-label="Visit our YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/?text=Hello%20L'Amour%20Atelier,%20I%20would%20like%20to%20inquire%20about%20custom%20wedding%20favors." target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp Concierge" aria-label="Chat with our Wedding Concierge on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="Connect with us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Boutique Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Classic Elegance (Home 1)</a></li>
+            <li><a href="home-2.html">Botanical Luxe (Home 2)</a></li>
+            <li><a href="products.html">Favors by Theme</a></li>
+            <li><a href="product.html">Featured Product Page</a></li>
+            <li><a href="custom-branding.html">Custom Branding Studio</a></li>
+            <li><a href="contact.html">Wedding Consultation Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Favor Collections</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?theme=boho">Artisan Soy Candles</a></li>
+            <li><a href="products.html?theme=gourmet">Wildflower Honey Pots</a></li>
+            <li><a href="products.html?theme=luxe">Hot Foil Gift Boxes</a></li>
+            <li><a href="products.html?theme=vintage">Antique Key Openers</a></li>
+            <li><a href="products.html?theme=bridal">Bridesmaid Proposal Suites</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio & Concierge</h4>
+          <p style="margin-bottom: 8px;"><i class="fas fa-map-marker-alt" style="color: var(--color-gold-light); margin-right: 8px;"></i> 742 Rosewood Avenue, Suite 400<br>Bridal District, NY 10012</p>
+          <p style="margin-bottom: 8px;"><i class="fas fa-envelope" style="color: var(--color-gold-light); margin-right: 8px;"></i> concierge@lamourfavors.com</p>
+          <p><i class="fas fa-phone" style="color: var(--color-gold-light); margin-right: 8px;"></i> +1 (800) 428-LOVE</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 L'Amour Atelier & Wedding Favors Inc. All rights reserved.</span>
+        <span>Designed with Love for Unforgettable Weddings</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal Container -->
+  <div class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <div class="modal-grid">
+        <div class="modal-media">
+          <img src="" alt="Favor item" class="modal-img">
+        </div>
+        <div class="modal-body">
+          <span class="product-theme-tag modal-product-theme">Collection</span>
+          <h3 class="modal-product-title" style="font-size: 1.6rem; margin-bottom: 10px;">Favor Title</h3>
+          <div class="modal-product-price" style="font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin-bottom: 8px;">$4.50</div>
+          <span class="modal-product-moq" style="font-size: 0.8rem; color: var(--color-muted); margin-bottom: 18px;">Min. Order: 30 pieces</span>
+          
+          <p style="font-size: 0.9rem; color: var(--color-muted); line-height: 1.7; margin-bottom: 20px;">
+            Personalize this keepsake with your names, wedding date, custom foil stamping, and choice of handmade silk ribbon. Crafted to order in our artisan studio.
+          </p>
+
+          <div style="background-color: var(--color-ivory); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 24px; font-size: 0.82rem; border: 1px solid var(--color-border);">
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 6px;">
+              <i class="fas fa-check" style="color: var(--color-sage-dark);"></i>
+              <span>Complimentary digital visual proof included</span>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <i class="fas fa-check" style="color: var(--color-sage-dark);"></i>
+              <span>Tier discounts apply automatically on 100+ pcs</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: auto;">
+            <button class="btn btn-gold btn-pill modal-add-wishlist-btn" style="flex-grow: 1;">
+              <i class="far fa-heart"></i> Add to Favor Wishlist
+            </button>
+            <a href="contact.html" class="btn btn-outline btn-pill">Custom Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer Container -->
+  <div class="drawer-overlay"></div>
+  <div class="drawer-panel">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Favor Wishlist & Samples</h3>
+      <button class="nav-icon-btn close-drawer-btn" style="font-size: 1.2rem;"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-body">
+      <!-- Populated via script.js -->
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-total">
+        <span>Sample Order Total:</span>
+        <span class="drawer-total-amount">$0.00</span>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--color-muted); margin-bottom: 16px;">
+        *Sample orders include physical sample favors with foil swatch card & scent card.
+      </p>
+      <a href="contact.html" class="btn btn-gold btn-pill" style="width: 100%; text-align: center;">
+        Inquire / Order Samples <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container"></div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+

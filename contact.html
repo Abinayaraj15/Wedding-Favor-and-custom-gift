@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Favor Consultation & Enquiry | L'Amour Atelier</title>
+  <meta name="description" content="Inquire about custom bespoke wedding favors, schedule a private bridal studio consultation, or request your complimentary personalized sample box.">
+  
+  <!-- Favicon Suite -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=5.3">
+
+  <!-- Exact Unified Hero Sizing across all viewports -->
+  <style>
+    .hero-classic,
+    .page-banner {
+      height: 480px !important;
+      min-height: 480px !important;
+      max-height: 480px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      padding: 40px 24px !important;
+      border-bottom: 3px solid var(--color-accent) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+    @media (max-width: 1040px) {
+      .hero-classic,
+      .page-banner {
+        height: 440px !important;
+        min-height: 440px !important;
+        max-height: 440px !important;
+        padding: 32px 20px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .hero-classic,
+      .page-banner {
+        height: 380px !important;
+        min-height: 380px !important;
+        max-height: 380px !important;
+        padding: 24px 18px !important;
+      }
+      .hero-title,
+      .page-banner-title {
+        font-size: clamp(1.5rem, 5vw, 1.85rem) !important;
+        line-height: 1.22 !important;
+        margin-bottom: 8px !important;
+      }
+      .hero-description,
+      .page-banner-desc {
+        font-size: 0.88rem !important;
+        line-height: 1.45 !important;
+        max-width: 90% !important;
+        margin-bottom: 8px !important;
+      }
+      .hero-buttons {
+        margin-top: 10px !important;
+        gap: 10px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-classic,
+      .page-banner {
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+        padding: 16px 14px !important;
+      }
+      .section-tag {
+        font-size: 0.72rem !important;
+        padding: 4px 10px !important;
+        margin-bottom: 6px !important;
+      }
+      .hero-title,
+      .page-banner-title {
+        font-size: 1.3rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+      }
+      .hero-description,
+      .page-banner-desc {
+        font-size: 0.82rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 8px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
+      .hero-buttons {
+        flex-direction: row !important;
+        justify-content: center !important;
+        width: auto !important;
+        gap: 8px !important;
+        margin-top: 4px !important;
+      }
+      .hero-buttons .btn {
+        width: auto !important;
+        padding: 7px 14px !important;
+        font-size: 0.78rem !important;
+      }
+      .breadcrumb {
+        margin-bottom: 6px !important;
+        font-size: 0.75rem !important;
+      }
+    }
+  </style>
+
+  <!-- Instant Theme & Direction Initializer to prevent flash -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('wedding_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        if (localStorage.getItem('wedding_direction') === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span>✨ <strong>2026/2027 Wedding Dates:</strong> Booking custom favor productions now. Concierge responds within 24 hours.</span>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-monogram">L'Amour</span>
+        <span class="brand-name">Atelier & Gifts</span>
+        <span class="brand-tagline">Bespoke Wedding Keepsakes</span>
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item has-dropdown">
+          <button class="nav-link dropdown-toggle" id="homeDropdownBtn" aria-expanded="false" aria-haspopup="true" type="button">
+            <span>Home</span>
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="homeDropdownBtn">
+            <a href="index.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 1</span>
+              <span class="dropdown-item-sub">Classic Elegance</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 2</span>
+              <span class="dropdown-item-sub">Botanical Luxe</span>
+            </a>
+          </div>
+        </div>
+        <a href="products.html" class="nav-link">Favors by Theme</a>
+        <a href="product.html" class="nav-link">Product Page</a>
+        <a href="custom-branding.html" class="nav-link">Custom Branding</a>
+        <a href="contact.html" class="nav-link active">Contact & Enquiry</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
+          <i class="fas fa-arrow-left"></i>
+          <span class="rtl-badge">RTL</span>
+        </button>
+        <button class="nav-icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="nav-icon-btn open-wishlist-btn" title="View Favor Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="badge-count wishlist-count-badge">2</span>
+        </button>
+        <a href="contact.html" class="btn btn-gold btn-sm btn-pill">Request Quote</a>
+        <button class="mobile-toggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner contact-banner" style="height: 480px; min-height: 480px;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i>
+          <span>Wedding Favor Consultation</span>
+        </div>
+        <h1 class="page-banner-title">Let’s Create Something Unforgettable</h1>
+        <p class="page-banner-desc">
+          Whether you have an exact vision or need creative guidance from our styling team, we are here to assist your wedding favor journey.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Enquiry Layout -->
+  <section class="section-padding bg-ivory">
+    <div class="container">
+      <div class="contact-layout">
+        
+        <!-- Left Column: The Wedding Favor Enquiry Form -->
+        <div class="enquiry-card">
+          <span class="section-tag">Custom Proposal</span>
+          <h2 style="font-size: 2.1rem; margin-bottom: 8px;">Wedding Favor Enquiry & Consultation</h2>
+          <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: 28px;">
+            Fill in your wedding details below to receive a custom design moodboard, itemized tier pricing, and sample kit instructions.
+          </p>
+
+          <form id="weddingEnquiryForm" novalidate>
+            <!-- Row 1: Names & Contact -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="coupleName" class="form-label">Couple or Planner Name *</label>
+                <input type="text" id="coupleName" name="coupleName" class="form-control" placeholder="e.g. Eleanor & Thomas / Sarah (Planner)" required minlength="3" maxlength="60" autocomplete="name" pattern="^[A-Za-zÀ-ÿ\s&'.,/\-\(\)]{3,60}$">
+                <div class="field-error-msg" id="coupleNameError" role="alert">
+                  <i class="fas fa-exclamation-circle"></i>
+                  <span>Please enter a valid couple or planner name.</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="clientEmail" class="form-label">Email Address *</label>
+                <input type="email" id="clientEmail" name="clientEmail" class="form-control" placeholder="yourname@domain.com" required autocomplete="email" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$">
+                <div class="field-error-msg" id="clientEmailError" role="alert">
+                  <i class="fas fa-exclamation-circle"></i>
+                  <span>Please enter a valid email format (e.g. yourname@domain.com).</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Phone & Wedding Date -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientPhone" class="form-label">Phone / WhatsApp *</label>
+                <input type="tel" id="clientPhone" name="clientPhone" class="form-control" placeholder="+1 (555) 000-0000" required autocomplete="tel" minlength="7" maxlength="20">
+                <div class="field-error-msg" id="clientPhoneError" role="alert">
+                  <i class="fas fa-exclamation-circle"></i>
+                  <span>Please enter a valid phone number (at least 7 to 15 digits).</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="weddingDate" class="form-label">Wedding Date *</label>
+                <input type="date" id="weddingDate" name="weddingDate" class="form-control" required min="2026-10-19" max="2036-12-31">
+                <div class="field-error-msg" id="weddingDateError" role="alert">
+                  <i class="fas fa-exclamation-circle"></i>
+                  <span>Please select an upcoming wedding date (cannot be in the past).</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3: Venue / Destination & Wedding Theme -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="weddingVenue" class="form-label">Venue & Destination City</label>
+                <input type="text" id="weddingVenue" name="weddingVenue" class="form-control" placeholder="e.g. Villa Ephrussi, France / Napa Valley">
+                <div class="field-error-msg" id="weddingVenueError" role="alert">
+                  <i class="fas fa-exclamation-circle"></i>
+                  <span></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="weddingAesthetic" class="form-label">Primary Wedding Style</label>
+                <select id="weddingAesthetic" class="form-control">
+                  <option value="rustic">Rustic & Botanical Elegance</option>
+                  <option value="luxe">Modern Luxe & Black Tie</option>
+                  <option value="coastal">Coastal & Riviera Chic</option>
+                  <option value="vintage">Vintage Glamour & Romantic</option>
+                  <option value="minimalist">Minimalist Modern</option>
+                  <option value="gourmet">Gourmet & Edibles</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Guest Count / Favor Quantity Range Slider -->
+            <div class="form-group" style="margin-top: 10px; margin-bottom: 26px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <label class="form-label" style="margin-bottom: 0;">Estimated Guest Count / Favors Needed:</label>
+                <span id="contactGuestCountDisplay" style="font-weight: 700; color: var(--color-primary); font-size: 1.05rem;">120 Guests / Favors</span>
+              </div>
+              <input type="range" class="range-slider" id="contactGuestCountSlider" min="20" max="500" step="10" value="120">
+              <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--color-muted); margin-top: 4px;">
+                <span>20 Intimate</span>
+                <span>100 Standard</span>
+                <span>250 Grand</span>
+                <span>500+ Gala</span>
+              </div>
+            </div>
+
+            <!-- Favors of Interest Checkboxes -->
+            <div class="form-group">
+              <label class="form-label">Favors of Primary Interest (Select all that apply):</label>
+              <div class="checkbox-group">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="favorInterest" value="candle" checked>
+                  <span>Artisan Amber Soy Candles</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="favorInterest" value="honey" checked>
+                  <span>Wildflower Honey Jars & Dippers</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="favorInterest" value="box">
+                  <span>Hot Foil Linen Favor Boxes</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="favorInterest" value="key">
+                  <span>Vintage Key Bottle Openers</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="favorInterest" value="seeds">
+                  <span>Botanical Seed Paper Keepsakes</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="favorInterest" value="oliveoil">
+                  <span>Tuscan Extra Virgin Olive Oil</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="favorInterest" value="bridal">
+                  <span>Bridal Party Proposal Suites</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="favorInterest" value="coasters">
+                  <span>Engraved Wood / Ceramic Coasters</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Custom Branding Techniques Needed -->
+            <div class="form-group">
+              <label class="form-label">Personalization & Branding Options:</label>
+              <div class="checkbox-group">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="brandingTechnique" value="foil" checked>
+                  <span>Metallic Hot Foil Stamping</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="brandingTechnique" value="wax" checked>
+                  <span>Hand-Poured Wax Seals</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="brandingTechnique" value="ribbon">
+                  <span>Plant-Dyed Silk Ribbons</span>
+                </label>
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="brandingTechnique" value="laser">
+                  <span>Laser Engraving / Etching</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Notes / Moodboard textarea -->
+            <div class="form-group">
+              <label for="weddingNotes" class="form-label">Inspiration Notes, Color Palette, or Questions</label>
+              <textarea id="weddingNotes" class="form-control" placeholder="Tell us about your wedding colors, preferred scents, monogram vision, or paste links to your Pinterest moodboard..."></textarea>
+            </div>
+
+            <!-- Live Estimated Investment Summary -->
+            <div style="background-color: var(--color-ivory); border-radius: var(--radius-sm); padding: 18px 24px; margin-bottom: 24px; border: 1px dashed var(--color-gold); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+              <div>
+                <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-gold-dark); font-weight: 600; display: block;">Estimated Production Investment:</span>
+                <span id="estimatedEnquiryTotal" style="font-size: 1.6rem; font-weight: 700; font-family: var(--font-display); color: var(--color-charcoal);">~$576</span>
+                <span style="font-size: 0.75rem; color: var(--color-muted); margin-left: 8px;">(Reflects bulk tier discount)</span>
+              </div>
+              <div style="font-size: 0.78rem; color: var(--color-sage-dark); font-weight: 600;">
+                <i class="fas fa-gift"></i> Complimentary Sample Box Included
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-pill" style="width: 100%; font-size: 0.95rem; padding: 15px;">
+              <i class="fas fa-paper-plane"></i> Submit Wedding Favor Enquiry
+            </button>
+            <p style="text-align: center; font-size: 0.75rem; color: var(--color-muted); margin-top: 10px;">
+              No obligation. We reply with a detailed digital proposal and sample box voucher within 24 hours.
+            </p>
+          </form>
+        </div>
+
+        <!-- Right Column: Studio Information & Consultation Info -->
+        <div class="contact-sidebar">
+          
+          <!-- Showroom & Direct Info -->
+          <div class="info-card">
+            <h3>Atelier & Showroom</h3>
+            <div class="contact-meta-list">
+              <div class="contact-meta-item">
+                <div class="contact-meta-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <div>
+                  <strong>Bespoke Studio Address</strong>
+                  <span>742 Rosewood Avenue, Suite 400<br>Bridal District, New York, NY 10012</span>
+                </div>
+              </div>
+
+              <div class="contact-meta-item">
+                <div class="contact-meta-icon"><i class="fas fa-calendar-check"></i></div>
+                <div>
+                  <strong>Private Consultations</strong>
+                  <span>Tuesday – Saturday: 10:00 AM – 6:30 PM<br>Sunday: By Private Bridal Appointment</span>
+                </div>
+              </div>
+
+              <div class="contact-meta-item">
+                <div class="contact-meta-icon"><i class="fas fa-envelope-open-text"></i></div>
+                <div>
+                  <strong>Concierge Inquiries</strong>
+                  <span>concierge@lamourfavors.com<br>quotes@lamourfavors.com</span>
+                </div>
+              </div>
+
+              <div class="contact-meta-item">
+                <div class="contact-meta-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <strong>Client Care Line</strong>
+                  <span>+1 (800) 428-LOVE<br>Direct WhatsApp: +1 (212) 555-0198</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample Kit Spotlight -->
+          <div class="sample-kit-box">
+            <span class="section-tag" style="margin-bottom: 6px;">Sensory Experience</span>
+            <h4>Order the Bridal Sample Kit</h4>
+            <p>
+              Receive physical samples of our top favor styles, real metallic foil swatch charts, wax seal impressions, and natural fragrance blotters.
+            </p>
+            <div style="font-size: 1.3rem; font-weight: 700; color: var(--color-primary); margin-bottom: 14px;">
+              $25.00 <span style="font-size: 0.8rem; font-weight: 400; color: var(--color-muted);">(Credited back to your wedding order)</span>
+            </div>
+            <button class="btn btn-outline btn-sm btn-pill" onclick="addToWishlist({id: 'sample-kit-box', name: 'Curated 4-Piece Physical Sample Kit', theme: 'Sample Experience', price: 25.00, image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=400&q=80'})">
+              <i class="fas fa-box-open"></i> Add Sample Kit to Wishlist
+            </button>
+          </div>
+
+          <!-- Quick Planner Support -->
+          <div class="info-card" style="background-color: var(--color-cream);">
+            <div style="display: flex; gap: 14px; align-items: center; margin-bottom: 12px;">
+              <i class="fas fa-gem" style="color: var(--color-gold); font-size: 1.5rem;"></i>
+              <h4 style="font-size: 1.1rem; margin: 0;">For Wedding Planners</h4>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--color-muted); line-height: 1.6;">
+              Are you a professional event designer or luxury wedding coordinator? We offer trade discounts, custom client proofing portals, and white-glove venue fulfillment.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Atelier Showroom Map Section -->
+  <section class="showroom-map-section" id="showroom-map">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 36px;">
+        <span class="section-tag">Manhattan Atelier</span>
+        <h2 class="section-title">Visit Our Design Showroom</h2>
+        <p class="section-subtitle">
+          Touch our Italian linen stocks, inspect custom hot-foil swatches, and meet with a dedicated bridal favor stylist in the heart of the New York Bridal District.
+        </p>
+      </div>
+
+      <div class="map-layout-grid">
+        <!-- Interactive Map Embed Frame -->
+        <div class="map-frame-wrapper">
+          <iframe 
+            class="showroom-map-iframe"
+            title="L'Amour Atelier Manhattan Showroom Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.630095922756!2d-73.9984!3d40.7223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25988b43f9a9b%3A0x2a3e0f9b3c5a6b0!2sSoHo%2C%20New%20York%2C%20NY%2010012!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="map-live-badge">
+            <span class="live-dot"></span> Interactive Atelier Map
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=742+Rosewood+Avenue+Bridal+District+New+York+NY+10012" target="_blank" rel="noopener noreferrer" class="map-fullscreen-btn" title="Open full map in Google Maps">
+            <i class="fas fa-external-link-alt"></i> Open in Maps
+          </a>
+        </div>
+
+        <!-- Showroom Information & Appointment Card -->
+        <div class="showroom-details-card">
+          <div class="showroom-card-header">
+            <div class="showroom-pin-icon"><i class="fas fa-store-alt"></i></div>
+            <div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 4px; color: var(--color-charcoal);">SoHo &amp; Bridal District Atelier</h3>
+              <p style="font-size: 0.85rem; color: var(--color-muted); margin: 0;">742 Rosewood Avenue, Suite 400, New York, NY 10012</p>
+            </div>
+          </div>
+
+          <div class="showroom-info-block">
+            <h4 class="showroom-info-heading"><i class="far fa-clock"></i> Showroom Hours</h4>
+            <ul class="showroom-hours-list">
+              <li><span>Monday – Friday:</span> <strong>9:30 AM – 6:30 PM EST</strong></li>
+              <li><span>Saturday:</span> <strong>10:00 AM – 5:00 PM (Bridal Appts)</strong></li>
+              <li><span>Sunday:</span> <strong>Private VIP Consultations Only</strong></li>
+            </ul>
+          </div>
+
+          <div class="showroom-info-block">
+            <h4 class="showroom-info-heading"><i class="fas fa-subway"></i> Subway &amp; Transit</h4>
+            <div class="transit-pills">
+              <span class="transit-pill sub-bdfm"><i class="fas fa-train"></i> B D F M</span>
+              <span class="transit-pill-text">Broadway-Lafayette St (2 min walk)</span>
+            </div>
+            <div class="transit-pills" style="margin-top: 8px;">
+              <span class="transit-pill sub-nrw"><i class="fas fa-train"></i> N R W</span>
+              <span class="transit-pill-text">Prince Street Station (3 min walk)</span>
+            </div>
+          </div>
+
+          <div class="showroom-info-block">
+            <h4 class="showroom-info-heading"><i class="fas fa-parking"></i> Valet &amp; Parking</h4>
+            <p style="font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; margin: 0;">
+              Complimentary 1-hour valet parking validation at Mercer Garage (adjacent to Suite 400) for confirmed bridal consultation appointments.
+            </p>
+          </div>
+
+          <div class="showroom-cta-row">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=742+Rosewood+Avenue+Bridal+District+New+York+NY+10012" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-pill" style="flex: 1; text-align: center;">
+              <i class="fas fa-directions"></i> Get Directions
+            </a>
+            <a href="#weddingEnquiryForm" class="btn btn-outline btn-sm btn-pill" style="flex: 1; text-align: center;">
+              <i class="fas fa-calendar-alt"></i> Book Visit
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="align-items: flex-start; text-align: left; margin-bottom: 16px;">
+            <span class="brand-monogram" style="color: var(--color-gold-light);">L'Amour</span>
+            <span class="brand-name" style="color: white;">Atelier & Gifts</span>
+          </a>
+          <p>
+            Bespoke wedding favors, luxury personalized gifts, and bridal party keepsakes handcrafted with intention and elegance.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="Pinterest" aria-label="Visit our Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook" aria-label="Visit our Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube" aria-label="Visit our YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/?text=Hello%20L'Amour%20Atelier,%20I%20would%20like%20to%20inquire%20about%20custom%20wedding%20favors." target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp Concierge" aria-label="Chat with our Wedding Concierge on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="Connect with us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Boutique Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Classic Elegance (Home 1)</a></li>
+            <li><a href="home-2.html">Botanical Luxe (Home 2)</a></li>
+            <li><a href="products.html">Favors by Theme</a></li>
+            <li><a href="product.html">Featured Product Page</a></li>
+            <li><a href="custom-branding.html">Custom Branding Studio</a></li>
+            <li><a href="contact.html">Wedding Consultation Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Favor Collections</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?theme=boho">Artisan Soy Candles</a></li>
+            <li><a href="products.html?theme=gourmet">Wildflower Honey Pots</a></li>
+            <li><a href="products.html?theme=luxe">Hot Foil Gift Boxes</a></li>
+            <li><a href="products.html?theme=vintage">Antique Key Openers</a></li>
+            <li><a href="products.html?theme=bridal">Bridesmaid Proposal Suites</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio & Concierge</h4>
+          <p style="margin-bottom: 8px;"><i class="fas fa-map-marker-alt" style="color: var(--color-gold-light); margin-right: 8px;"></i> 742 Rosewood Avenue, Suite 400<br>Bridal District, NY 10012</p>
+          <p style="margin-bottom: 8px;"><i class="fas fa-envelope" style="color: var(--color-gold-light); margin-right: 8px;"></i> concierge@lamourfavors.com</p>
+          <p><i class="fas fa-phone" style="color: var(--color-gold-light); margin-right: 8px;"></i> +1 (800) 428-LOVE</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 L'Amour Atelier & Wedding Favors Inc. All rights reserved.</span>
+        <span>Designed with Love for Unforgettable Weddings</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal Container -->
+  <div class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <div class="modal-grid">
+        <div class="modal-media">
+          <img src="" alt="Favor item" class="modal-img">
+        </div>
+        <div class="modal-body">
+          <span class="product-theme-tag modal-product-theme">Collection</span>
+          <h3 class="modal-product-title" style="font-size: 1.6rem; margin-bottom: 10px;">Favor Title</h3>
+          <div class="modal-product-price" style="font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin-bottom: 8px;">$4.50</div>
+          <span class="modal-product-moq" style="font-size: 0.8rem; color: var(--color-muted); margin-bottom: 18px;">Min. Order: 30 pieces</span>
+          
+          <p style="font-size: 0.9rem; color: var(--color-muted); line-height: 1.7; margin-bottom: 20px;">
+            Personalize this keepsake with your names, wedding date, custom foil stamping, and choice of handmade silk ribbon. Crafted to order in our artisan studio.
+          </p>
+
+          <div style="background-color: var(--color-ivory); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 24px; font-size: 0.82rem; border: 1px solid var(--color-border);">
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 6px;">
+              <i class="fas fa-check" style="color: var(--color-sage-dark);"></i>
+              <span>Complimentary digital visual proof included</span>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <i class="fas fa-check" style="color: var(--color-sage-dark);"></i>
+              <span>Tier discounts apply automatically on 100+ pcs</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: auto;">
+            <button class="btn btn-gold btn-pill modal-add-wishlist-btn" style="flex-grow: 1;">
+              <i class="far fa-heart"></i> Add to Favor Wishlist
+            </button>
+            <a href="contact.html" class="btn btn-outline btn-pill">Custom Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer Container -->
+  <div class="drawer-overlay"></div>
+  <div class="drawer-panel">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Favor Wishlist & Samples</h3>
+      <button class="nav-icon-btn close-drawer-btn" style="font-size: 1.2rem;"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-body">
+      <!-- Dynamically populated via script.js -->
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-total">
+        <span>Sample Order Total:</span>
+        <span class="drawer-total-amount">$0.00</span>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--color-muted); margin-bottom: 16px;">
+        *Sample orders include physical sample favors with foil swatch card & scent card.
+      </p>
+      <a href="contact.html" class="btn btn-gold btn-pill" style="width: 100%; text-align: center;">
+        Inquire / Order Samples <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container"></div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js?v=4.0"></script>
+</body>
+</html>
+

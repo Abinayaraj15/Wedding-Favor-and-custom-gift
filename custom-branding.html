@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Branding & Personalization Studio | L'Amour Atelier</title>
+  <meta name="description" content="Design your personalized wedding favors in real time. Hot foil stamping, custom wax seals, laser engraving, bespoke packaging, and calligraphy monogramming.">
+  
+  <!-- Favicon Suite -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=5.3">
+
+  <!-- Exact Unified Hero Sizing across all viewports -->
+  <style>
+    .hero-classic,
+    .page-banner {
+      height: 480px !important;
+      min-height: 480px !important;
+      max-height: 480px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      padding: 40px 24px !important;
+      border-bottom: 3px solid var(--color-accent) !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+    @media (max-width: 1040px) {
+      .hero-classic,
+      .page-banner {
+        height: 440px !important;
+        min-height: 440px !important;
+        max-height: 440px !important;
+        padding: 32px 20px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .hero-classic,
+      .page-banner {
+        height: 380px !important;
+        min-height: 380px !important;
+        max-height: 380px !important;
+        padding: 24px 18px !important;
+      }
+      .hero-title,
+      .page-banner-title {
+        font-size: clamp(1.5rem, 5vw, 1.85rem) !important;
+        line-height: 1.22 !important;
+        margin-bottom: 8px !important;
+      }
+      .hero-description,
+      .page-banner-desc {
+        font-size: 0.88rem !important;
+        line-height: 1.45 !important;
+        max-width: 90% !important;
+        margin-bottom: 8px !important;
+      }
+      .hero-buttons {
+        margin-top: 10px !important;
+        gap: 10px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-classic,
+      .page-banner {
+        height: 350px !important;
+        min-height: 350px !important;
+        max-height: 350px !important;
+        padding: 16px 14px !important;
+      }
+      .section-tag {
+        font-size: 0.72rem !important;
+        padding: 4px 10px !important;
+        margin-bottom: 6px !important;
+      }
+      .hero-title,
+      .page-banner-title {
+        font-size: 1.3rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+      }
+      .hero-description,
+      .page-banner-desc {
+        font-size: 0.82rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 8px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
+      .hero-buttons {
+        flex-direction: row !important;
+        justify-content: center !important;
+        width: auto !important;
+        gap: 8px !important;
+        margin-top: 4px !important;
+      }
+      .hero-buttons .btn {
+        width: auto !important;
+        padding: 7px 14px !important;
+        font-size: 0.78rem !important;
+      }
+      .breadcrumb {
+        margin-bottom: 6px !important;
+        font-size: 0.75rem !important;
+      }
+    }
+  </style>
+
+  <!-- Instant Theme & Direction Initializer to prevent flash -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('wedding_theme');
+        if (theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        if (localStorage.getItem('wedding_direction') === 'rtl') {
+          document.documentElement.setAttribute('dir', 'rtl');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span>✨ <strong>Custom Brass Dies Included:</strong> Complimentary bespoke die creation on orders over 150 favors</span>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-monogram">L'Amour</span>
+        <span class="brand-name">Atelier & Gifts</span>
+        <span class="brand-tagline">Bespoke Wedding Keepsakes</span>
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item has-dropdown">
+          <button class="nav-link dropdown-toggle" id="homeDropdownBtn" aria-expanded="false" aria-haspopup="true" type="button">
+            <span>Home</span>
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="homeDropdownBtn">
+            <a href="index.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 1</span>
+              <span class="dropdown-item-sub">Classic Elegance</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 2</span>
+              <span class="dropdown-item-sub">Botanical Luxe</span>
+            </a>
+          </div>
+        </div>
+        <a href="products.html" class="nav-link">Favors by Theme</a>
+        <a href="product.html" class="nav-link">Product Page</a>
+        <a href="custom-branding.html" class="nav-link active">Custom Branding</a>
+        <a href="contact.html" class="nav-link">Contact & Enquiry</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn rtl-toggle-btn" title="Toggle RTL Direction" aria-label="Toggle RTL Direction">
+          <i class="fas fa-arrow-left"></i>
+          <span class="rtl-badge">RTL</span>
+        </button>
+        <button class="nav-icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="nav-icon-btn open-wishlist-btn" title="View Favor Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="badge-count wishlist-count-badge">2</span>
+        </button>
+        <a href="contact.html" class="btn btn-gold btn-sm btn-pill">Request Quote</a>
+        <button class="mobile-toggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner branding-banner" style="height: 480px; min-height: 480px;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right" style="font-size: 0.65rem;"></i>
+          <span>Custom Branding Studio</span>
+        </div>
+        <h1 class="page-banner-title">Bespoke Personalization Studio</h1>
+        <p class="page-banner-desc">
+          Transform artisanal keepsakes into heirloom tokens of your love story. Preview your names, dates, foil finishes, and wax seals live.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artisanal Branding Techniques Showcase -->
+  <section class="section-padding bg-ivory">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Couture Craftsmanship</span>
+        <h2 class="section-title">Our Signature Personalization Services</h2>
+        <p class="section-subtitle">
+          Every favor is individually crafted using time-honored artisanal techniques and high-precision modern equipment.
+        </p>
+      </div>
+
+      <div class="technique-grid">
+        <!-- Technique 1 -->
+        <div class="technique-card">
+          <div class="technique-icon-wrap"><i class="fas fa-stamp"></i></div>
+          <h3>Hot Foil Stamping</h3>
+          <p>
+            Traditional heat-pressed metallic foils in Royal Champagne Gold, Romantic Rose Gold, Sterling Silver, and Emerald. Indented deep into heavy cotton stock.
+          </p>
+        </div>
+
+        <!-- Technique 2 -->
+        <div class="technique-card">
+          <div class="technique-icon-wrap"><i class="fas fa-certificate"></i></div>
+          <h3>Handmade Wax Seals</h3>
+          <p>
+            Custom brass dies pressed into flexible, shatterproof sealing wax. Available in over 18 wedding shades with organic botanical or monogram impressions.
+          </p>
+        </div>
+
+        <!-- Technique 3 -->
+        <div class="technique-card">
+          <div class="technique-icon-wrap"><i class="fas fa-drafting-compass"></i></div>
+          <h3>Laser Etching & Engraving</h3>
+          <p>
+            Ultra-fine laser detailing on natural wood coasters, glass candle jars, and stainless steel flasks for permanent, indelible beauty.
+          </p>
+        </div>
+
+        <!-- Technique 4 -->
+        <div class="technique-card">
+          <div class="technique-icon-wrap"><i class="fas fa-ribbon"></i></div>
+          <h3>Hand-Dyed Silk Ribbons</h3>
+          <p>
+            Raw-edged chiffon and 100% mulberry silk ribbons naturally plant-dyed to match your floral arrangements and bridesmaid palette.
+          </p>
+        </div>
+
+        <!-- Technique 5 -->
+        <div class="technique-card">
+          <div class="technique-icon-wrap"><i class="fas fa-pen-nib"></i></div>
+          <h3>Calligraphy & Letterpress</h3>
+          <p>
+            Old-world Heidelberg letterpress printing paired with bespoke dip-pen calligraphy for name cards, escort tags, and thank-you notes.
+          </p>
+        </div>
+
+        <!-- Technique 6 -->
+        <div class="technique-card">
+          <div class="technique-icon-wrap"><i class="fas fa-box"></i></div>
+          <h3>Bespoke Rigid Boxes</h3>
+          <p>
+            Custom-sized rigid boxes wrapped in fine textured linen paper with magnetic closures, foam inserts, and debossed emblems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Branding Studio -->
+  <section class="section-padding bg-cream" id="customStudio">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Interactive Visualizer</span>
+        <h2 class="section-title">Live Wedding Favor Customizer</h2>
+        <p class="section-subtitle">
+          Customize your keepsake live. Type your names, pick your metallic foil finish, select your box color and wax seal to view your real-time proof.
+        </p>
+      </div>
+
+      <div class="customizer-layout">
+        <!-- Controls Column -->
+        <div class="customizer-controls-card">
+          
+          <!-- Control 1: Names & Monogram -->
+          <div class="control-group">
+            <label class="control-label">Couple Names & Monogram <span>Step 1</span></label>
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 14px; margin-bottom: 12px;">
+              <input type="text" id="inputCoupleNames" class="input-customizer" value="Charlotte & Alexander" placeholder="Couple Names">
+              <input type="text" id="inputMonogram" class="input-customizer" value="C & A" placeholder="Initials">
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <input type="text" id="inputEventDate" class="input-customizer" value="October 24, 2026" placeholder="Wedding Date">
+              <input type="text" id="inputTagline" class="input-customizer" value="Villa Ephrussi &bull; Côte d'Azur" placeholder="Location or Quote">
+            </div>
+          </div>
+
+          <!-- Control 2: Typography Style -->
+          <div class="control-group">
+            <label class="control-label">Typography Style <span>Step 2</span></label>
+            <div class="option-pill-grid">
+              <div class="pill-option">
+                <input type="radio" id="fontScript" name="fontStyle" value="script" checked>
+                <label for="fontScript"><span style="font-family: var(--font-script); font-size: 1.1rem;">Calligraphy</span></label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="fontSerif" name="fontStyle" value="serif">
+                <label for="fontSerif"><span style="font-family: var(--font-display);">Classic Serif</span></label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="fontSans" name="fontStyle" value="sans">
+                <label for="fontSans"><span style="font-family: var(--font-sans); font-size: 0.75rem;">Modern Minimal</span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Control 3: Hot Foil Finish (Vibrant Colorful Foils) -->
+          <div class="control-group">
+            <label class="control-label">Metallic Hot Foil Finish <span>Step 3</span></label>
+            <div class="option-pill-grid">
+              <div class="pill-option">
+                <input type="radio" id="foilRose" name="foilFinish" value="rose" checked>
+                <label for="foilRose"><i class="fas fa-gem" style="color: #D93B58;"></i> Rubellite Rose</label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="foilSapphire" name="foilFinish" value="sapphire">
+                <label for="foilSapphire"><i class="fas fa-gem" style="color: #245FA8;"></i> Royal Sapphire</label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="foilTeal" name="foilFinish" value="teal">
+                <label for="foilTeal"><i class="fas fa-gem" style="color: #129E9A;"></i> Peacock Teal</label>
+              </div>
+              <div class="pill-option">
+                <input type="radio" id="foilPurple" name="foilFinish" value="purple">
+                <label for="foilPurple"><i class="fas fa-gem" style="color: #8C2C7A;"></i> Orchid Amethyst</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Control 4: Packaging Box Color -->
+          <div class="control-group">
+            <label class="control-label">Linen Box Color <span>Step 4</span></label>
+            <div class="swatch-grid">
+              <div class="swatch-option" title="Alabaster Silk">
+                <input type="radio" id="boxIvory" name="boxColor" value="#FCFAF6" checked>
+                <label for="boxIvory" class="swatch-circle" style="background-color: #FCFAF6;"></label>
+              </div>
+              <div class="swatch-option" title="Rubellite Rose">
+                <input type="radio" id="boxRose" name="boxColor" value="#F9E2E7">
+                <label for="boxRose" class="swatch-circle" style="background-color: #F9E2E7;"></label>
+              </div>
+              <div class="swatch-option" title="Royal Sapphire">
+                <input type="radio" id="boxSapphire" name="boxColor" value="#193863">
+                <label for="boxSapphire" class="swatch-circle" style="background-color: #193863;"></label>
+              </div>
+              <div class="swatch-option" title="Peacock Teal">
+                <input type="radio" id="boxTeal" name="boxColor" value="#107478">
+                <label for="boxTeal" class="swatch-circle" style="background-color: #107478;"></label>
+              </div>
+              <div class="swatch-option" title="Orchid Amethyst">
+                <input type="radio" id="boxPurple" name="boxColor" value="#E7D9E9">
+                <label for="boxPurple" class="swatch-circle" style="background-color: #E7D9E9;"></label>
+              </div>
+              <div class="swatch-option" title="Midnight Navy">
+                <input type="radio" id="boxNavy" name="boxColor" value="#141A24">
+                <label for="boxNavy" class="swatch-circle" style="background-color: #141A24;"></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Control 5: Silk Ribbon Accent -->
+          <div class="control-group">
+            <label class="control-label">Hand-Dyed Silk Ribbon <span>Step 5</span></label>
+            <div class="swatch-grid">
+              <div class="swatch-option" title="Rubellite Rose Silk">
+                <input type="radio" id="ribbonRose" name="ribbonColor" value="#D93B58" checked>
+                <label for="ribbonRose" class="swatch-circle" style="background-color: #D93B58;"></label>
+              </div>
+              <div class="swatch-option" title="Mediterranean Turquoise">
+                <input type="radio" id="ribbonTeal" name="ribbonColor" value="#1DA7AD">
+                <label for="ribbonTeal" class="swatch-circle" style="background-color: #1DA7AD;"></label>
+              </div>
+              <div class="swatch-option" title="Orchid Amethyst">
+                <input type="radio" id="ribbonPurple" name="ribbonColor" value="#7A2F6D">
+                <label for="ribbonPurple" class="swatch-circle" style="background-color: #7A2F6D;"></label>
+              </div>
+              <div class="swatch-option" title="Royal Sapphire">
+                <input type="radio" id="ribbonSapphire" name="ribbonColor" value="#1B4882">
+                <label for="ribbonSapphire" class="swatch-circle" style="background-color: #1B4882;"></label>
+              </div>
+              <div class="swatch-option" title="Silk Pearl">
+                <input type="radio" id="ribbonPearl" name="ribbonColor" value="#F5EEF0">
+                <label for="ribbonPearl" class="swatch-circle" style="background-color: #F5EEF0;"></label>
+              </div>
+              <div class="swatch-option" title="No Ribbon">
+                <input type="radio" id="ribbonNone" name="ribbonColor" value="none">
+                <label for="ribbonNone" class="swatch-circle" style="background-color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: #999;">✕</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Control 6: Wax Seal Stamp & Color -->
+          <div class="control-group">
+            <label class="control-label">Hand-Poured Wax Seal <span>Step 6</span></label>
+            <div style="margin-bottom: 14px;">
+              <span style="font-size: 0.78rem; color: var(--color-muted); display: block; margin-bottom: 8px;">Wax Seal Stamp Motif:</span>
+              <div class="option-pill-grid">
+                <div class="pill-option">
+                  <input type="radio" id="sealWreath" name="waxSealStamp" value="fas fa-feather-alt" checked>
+                  <label for="sealWreath"><i class="fas fa-feather-alt"></i> Botanical</label>
+                </div>
+                <div class="pill-option">
+                  <input type="radio" id="sealHeart" name="waxSealStamp" value="fas fa-heart">
+                  <label for="sealHeart"><i class="fas fa-heart"></i> Monogram Heart</label>
+                </div>
+                <div class="pill-option">
+                  <input type="radio" id="sealCrown" name="waxSealStamp" value="fas fa-crown">
+                  <label for="sealCrown"><i class="fas fa-crown"></i> Royal Crest</label>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <span style="font-size: 0.78rem; color: var(--color-muted); display: block; margin-bottom: 8px;">Sealing Wax Shade:</span>
+              <div class="swatch-grid">
+                <div class="swatch-option" title="Rubellite Rose Wax">
+                  <input type="radio" id="waxRose" name="waxSealColor" value="radial-gradient(circle at 30% 30%, #D93B58, #9B1D34)" checked>
+                  <label for="waxRose" class="swatch-circle" style="background: radial-gradient(circle at 30% 30%, #D93B58, #9B1D34);"></label>
+                </div>
+                <div class="swatch-option" title="Peacock Teal Wax">
+                  <input type="radio" id="waxTeal" name="waxSealColor" value="radial-gradient(circle at 30% 30%, #159EA5, #0B5C60)">
+                  <label for="waxTeal" class="swatch-circle" style="background: radial-gradient(circle at 30% 30%, #159EA5, #0B5C60);"></label>
+                </div>
+                <div class="swatch-option" title="Royal Amethyst Wax">
+                  <input type="radio" id="waxPurple" name="waxSealColor" value="radial-gradient(circle at 30% 30%, #87367B, #481440)">
+                  <label for="waxPurple" class="swatch-circle" style="background: radial-gradient(circle at 30% 30%, #87367B, #481440);"></label>
+                </div>
+                <div class="swatch-option" title="Sapphire Azure Wax">
+                  <input type="radio" id="waxSapphire" name="waxSealColor" value="radial-gradient(circle at 30% 30%, #205EA8, #0E2E59)">
+                  <label for="waxSapphire" class="swatch-circle" style="background: radial-gradient(circle at 30% 30%, #205EA8, #0E2E59);"></label>
+                </div>
+                <div class="swatch-option" title="No Wax Seal">
+                  <input type="radio" id="waxNone" name="waxSealColor" value="none">
+                  <label for="waxNone" class="swatch-circle" style="background-color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: #999;">✕</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sticky Live Preview Column -->
+        <div class="customizer-preview-card">
+          <div class="preview-stage-header">
+            <span class="preview-stage-title">Live Proof Simulator</span>
+            <span class="live-badge"><span class="live-dot"></span> Real-Time Render</span>
+          </div>
+
+          <div class="preview-canvas-box">
+            <!-- Simulated Favor Box -->
+            <div class="mockup-favor-box">
+              <div class="mockup-ribbon"></div>
+              <div class="mockup-wax-seal"><i class="fas fa-feather-alt"></i></div>
+              
+              <div class="mockup-content">
+                <div class="mockup-monogram font-style-script foil-text-rose">C & A</div>
+                <div class="mockup-names font-style-script foil-text-rose">Charlotte & Alexander</div>
+                <div class="mockup-tagline foil-text-rose">Villa Ephrussi &bull; Côte d'Azur</div>
+                <div class="mockup-date foil-text-rose">October 24, 2026</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="customizer-summary">
+            <div class="price-breakdown">
+              <div>
+                <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-muted); display: block;">Estimated Unit Price:</span>
+                <span class="custom-price-tag">$6.00</span>
+                <span style="font-size: 0.75rem; color: var(--color-sage-dark); font-weight: 600;">(Bulk tier discounts apply)</span>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--color-muted); text-align: right;">Includes hot foil die +<br>wax seal & silk ribbon</span>
+            </div>
+
+            <div class="preview-action-btns">
+              <button class="btn btn-gold btn-pill" id="saveCustomDesignBtn">
+                <i class="fas fa-save"></i> Save Branded Design to Inquiry
+              </button>
+              <a href="contact.html" class="btn btn-outline btn-pill">
+                Request Physical Sample Proof
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio of Bespoke Favors -->
+  <section class="section-padding bg-white" id="celebrations-gallery">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Atelier Gallery</span>
+        <h2 class="section-title">Past Custom Branded Celebrations</h2>
+        <p class="section-subtitle">
+          A glimpse into the one-of-a-kind favors created for couples celebrated around the world.
+        </p>
+      </div>
+
+      <div class="collection-grid">
+        <div class="collection-card">
+          <div class="collection-img-wrap">
+            <img src="assets/images/lake-como-favor-box.jpg" alt="Lake Como Bespoke Hot-Foil Stamped Wedding Favor Boxes">
+            <div class="collection-overlay celebration-overlay">
+              <span class="celebration-tag">Lake Como, Italy</span>
+              <h3 class="celebration-names">Genevieve & Harrison</h3>
+              <p class="celebration-desc">Rigid linen favor boxes stamped in metallic rose gold foil with hand-dyed silk ribbon.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1491821893533-80f535044695?auto=format&fit=crop&w=800&q=80" alt="Napa Valley Artisan Macaron Keepsake Wedding Favor Box">
+            <div class="collection-overlay celebration-overlay">
+              <span class="celebration-tag">Napa Valley, California</span>
+              <h3 class="celebration-names">Victoria & Dominic</h3>
+              <p class="celebration-desc">Artisan French macaron keepsake boxes hand-tied with pastel silk ribbons and custom monogram tags.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1620843437920-ead942b3abd3?auto=format&fit=crop&w=800&q=80" alt="Cotswolds Curated VIP Bridesmaid & Wedding Favor Gift Hampers">
+            <div class="collection-overlay celebration-overlay">
+              <span class="celebration-tag">Cotswolds, England</span>
+              <h3 class="celebration-names">Penelope & Edward</h3>
+              <p class="celebration-desc">Bespoke branded gift boxes with monogrammed keepsakes, custom tissue liners & silk cords.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="align-items: flex-start; text-align: left; margin-bottom: 16px;">
+            <span class="brand-monogram" style="color: var(--color-gold-light);">L'Amour</span>
+            <span class="brand-name" style="color: white;">Atelier & Gifts</span>
+          </a>
+          <p>
+            Bespoke wedding favors, luxury personalized gifts, and bridal party keepsakes handcrafted with intention and elegance.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="Pinterest" aria-label="Visit our Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook" aria-label="Visit our Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube" aria-label="Visit our YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/?text=Hello%20L'Amour%20Atelier,%20I%20would%20like%20to%20inquire%20about%20custom%20wedding%20favors." target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp Concierge" aria-label="Chat with our Wedding Concierge on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="Connect with us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Boutique Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Classic Elegance (Home 1)</a></li>
+            <li><a href="home-2.html">Botanical Luxe (Home 2)</a></li>
+            <li><a href="products.html">Favors by Theme</a></li>
+            <li><a href="product.html">Featured Product Page</a></li>
+            <li><a href="custom-branding.html">Custom Branding Studio</a></li>
+            <li><a href="contact.html">Wedding Consultation Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Favor Collections</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?theme=boho">Artisan Soy Candles</a></li>
+            <li><a href="products.html?theme=gourmet">Wildflower Honey Pots</a></li>
+            <li><a href="products.html?theme=luxe">Hot Foil Gift Boxes</a></li>
+            <li><a href="products.html?theme=vintage">Antique Key Openers</a></li>
+            <li><a href="products.html?theme=bridal">Bridesmaid Proposal Suites</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Studio & Concierge</h4>
+          <p style="margin-bottom: 8px;"><i class="fas fa-map-marker-alt" style="color: var(--color-gold-light); margin-right: 8px;"></i> 742 Rosewood Avenue, Suite 400<br>Bridal District, NY 10012</p>
+          <p style="margin-bottom: 8px;"><i class="fas fa-envelope" style="color: var(--color-gold-light); margin-right: 8px;"></i> concierge@lamourfavors.com</p>
+          <p><i class="fas fa-phone" style="color: var(--color-gold-light); margin-right: 8px;"></i> +1 (800) 428-LOVE</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 L'Amour Atelier & Wedding Favors Inc. All rights reserved.</span>
+        <span>Designed with Love for Unforgettable Weddings</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal Container -->
+  <div class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <div class="modal-grid">
+        <div class="modal-media">
+          <img src="" alt="Favor item" class="modal-img">
+        </div>
+        <div class="modal-body">
+          <span class="product-theme-tag modal-product-theme">Collection</span>
+          <h3 class="modal-product-title" style="font-size: 1.6rem; margin-bottom: 10px;">Favor Title</h3>
+          <div class="modal-product-price" style="font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin-bottom: 8px;">$4.50</div>
+          <span class="modal-product-moq" style="font-size: 0.8rem; color: var(--color-muted); margin-bottom: 18px;">Min. Order: 30 pieces</span>
+          
+          <p style="font-size: 0.9rem; color: var(--color-muted); line-height: 1.7; margin-bottom: 20px;">
+            Personalize this keepsake with your names, wedding date, custom foil stamping, and choice of handmade silk ribbon. Crafted to order in our artisan studio.
+          </p>
+
+          <div style="background-color: var(--color-ivory); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 24px; font-size: 0.82rem; border: 1px solid var(--color-border);">
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 6px;">
+              <i class="fas fa-check" style="color: var(--color-sage-dark);"></i>
+              <span>Complimentary digital visual proof included</span>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <i class="fas fa-check" style="color: var(--color-sage-dark);"></i>
+              <span>Tier discounts apply automatically on 100+ pcs</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: auto;">
+            <button class="btn btn-gold btn-pill modal-add-wishlist-btn" style="flex-grow: 1;">
+              <i class="far fa-heart"></i> Add to Favor Wishlist
+            </button>
+            <a href="contact.html" class="btn btn-outline btn-pill">Custom Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer Container -->
+  <div class="drawer-overlay"></div>
+  <div class="drawer-panel">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Favor Wishlist & Samples</h3>
+      <button class="nav-icon-btn close-drawer-btn" style="font-size: 1.2rem;"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-body">
+      <!-- Dynamically populated -->
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-total">
+        <span>Sample Order Total:</span>
+        <span class="drawer-total-amount">$0.00</span>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--color-muted); margin-bottom: 16px;">
+        *Sample orders include physical sample favors with foil swatch card & scent card.
+      </p>
+      <a href="contact.html" class="btn btn-gold btn-pill" style="width: 100%; text-align: center;">
+        Inquire / Order Samples <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container"></div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
